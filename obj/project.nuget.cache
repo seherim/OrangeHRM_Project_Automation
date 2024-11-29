@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "k7QlEjXu66E=",
+  "success": true,
+  "projectFilePath": "/Users/anasghazi/SeleniumTest/SeleniumTest.csproj",
+  "expectedPackageFiles": [
+    "/Users/anasghazi/.nuget/packages/selenium.webdriver/4.27.0/selenium.webdriver.4.27.0.nupkg.sha512",
+    "/Users/anasghazi/.nuget/packages/selenium.webdriver.chromedriver/131.0.6778.8500/selenium.webdriver.chromedriver.131.0.6778.8500.nupkg.sha512"
+  ],
+  "logs": []
+}
