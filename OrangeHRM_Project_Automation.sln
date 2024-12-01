@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeHRM_Project_Automation", "OrangeHRM_Project_Automation\OrangeHRM_Project_Automation.csproj", "{2D183C21-A6C2-43B2-AD20-B68C3AC16A2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D183C21-A6C2-43B2-AD20-B68C3AC16A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D183C21-A6C2-43B2-AD20-B68C3AC16A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D183C21-A6C2-43B2-AD20-B68C3AC16A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D183C21-A6C2-43B2-AD20-B68C3AC16A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B351493B-794A-4E0C-AD82-E41D9F919504}
+	EndGlobalSection
+EndGlobal
