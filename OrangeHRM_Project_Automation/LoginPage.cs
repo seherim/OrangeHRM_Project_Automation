@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OrangeHRM_Project_Automation
 {
-    class Class1
+    class LoginPage
     {
+
     }
 }
