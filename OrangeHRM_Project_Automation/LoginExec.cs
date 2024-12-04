@@ -13,9 +13,11 @@ namespace OrangeHRM_Project_Automation
     public class LoginExec
     {
         LoginPage loginPage = new LoginPage();
+
         [TestMethod]
         public void Login_Valid_TC001()
         {
+            CorePage.SeleniumInit();
             string url = "https://opensource-demo.orangehrmlive.com/";
             string username = "Admin";
             string password = "admin123";
@@ -31,6 +33,7 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void Login_Invalid_TC002()
         {
+            CorePage.SeleniumInit();
             string url = "https://opensource-demo.orangehrmlive.com/";
             string username = "Admins";
             string password = "admin!23";
