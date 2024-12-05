@@ -85,6 +85,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PIMExec.cs" />
+    <Compile Include="PIMPage.cs" />
     <Compile Include="CorePage.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="LoginExec.cs" />
