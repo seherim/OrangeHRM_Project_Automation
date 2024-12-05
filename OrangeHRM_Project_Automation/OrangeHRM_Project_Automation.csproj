@@ -85,6 +85,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogoutExec.cs" />
+    <Compile Include="LogoutPage.cs" />
+    <Compile Include="RecruitExec.cs" />
+    <Compile Include="RecruitPage.cs" />
+    <Compile Include="LeaveExec.cs" />
+    <Compile Include="LeavePage.cs" />
     <Compile Include="PIMExec.cs" />
     <Compile Include="PIMPage.cs" />
     <Compile Include="CorePage.cs" />
