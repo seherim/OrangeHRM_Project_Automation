@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anasghazi/SeleniumTest/SeleniumTest.csproj": {}
+    "/Users/anasghazi/Desktop/Orange_selenium/Orange_selenium/SeleniumTest.csproj": {}
   },
   "projects": {
-    "/Users/anasghazi/SeleniumTest/SeleniumTest.csproj": {
+    "/Users/anasghazi/Desktop/Orange_selenium/Orange_selenium/SeleniumTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anasghazi/SeleniumTest/SeleniumTest.csproj",
+        "projectUniqueName": "/Users/anasghazi/Desktop/Orange_selenium/Orange_selenium/SeleniumTest.csproj",
         "projectName": "SeleniumTest",
-        "projectPath": "/Users/anasghazi/SeleniumTest/SeleniumTest.csproj",
+        "projectPath": "/Users/anasghazi/Desktop/Orange_selenium/Orange_selenium/SeleniumTest.csproj",
         "packagesPath": "/Users/anasghazi/.nuget/packages/",
-        "outputPath": "/Users/anasghazi/SeleniumTest/obj/",
+        "outputPath": "/Users/anasghazi/Desktop/Orange_selenium/Orange_selenium/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/anasghazi/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,18 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.27.0, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.27.0, )"
