@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace OrangeHRM_Project_Automation
 {
-    class LogoutExec
+    [TestClass]
+    public class LogoutExec
     {
         LoginPage loginPage = new LoginPage();
         LogoutPage logoutPage = new LogoutPage();
 
+        [TestMethod]
         public void Logout_Valid_TC001()
         {
             CorePage.SeleniumInit();

@@ -9,14 +9,20 @@ namespace OrangeHRM_Project_Automation
 {
     class LoginPage : CorePage
     {
+        #region Locators
+        By usernametxt = By.Name("username");
+        By passwdtxt = By.Name("password");
+        By loginbtn = By.XPath("//button[@type='submit']");
+        #endregion
+
         public void Login(string url, string username, string password)
         {
             driver.Url = url;
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
-            driver.FindElement(By.Name("username")).SendKeys(username);
-            driver.FindElement(By.Name("password")).SendKeys(password);
-            driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+            driver.FindElement(usernametxt).SendKeys(username);
+            driver.FindElement(passwdtxt).SendKeys(password);
+            driver.FindElement(loginbtn).Click();
         }
     }
 }

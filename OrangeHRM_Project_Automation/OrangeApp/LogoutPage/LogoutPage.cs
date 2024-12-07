@@ -9,11 +9,15 @@ namespace OrangeHRM_Project_Automation
 {
     class LogoutPage : CorePage
     {
+        #region Locators
+        By dropdown = By.XPath("//span[@class='oxd-userdropdown-tab']");
+        By logoutbtn = By.XPath("//a[text()='Logout']");
+        #endregion
         public void Logout()
         {
-            driver.FindElement(By.XPath("//span[@class='oxd-userdropdown-tab']")).Click();
+            driver.FindElement(dropdown).Click();
             
-            driver.FindElement(By.XPath("//a[text()='Logout']")).Click();
+            driver.FindElement(logoutbtn).Click();
         }
     }
 }
