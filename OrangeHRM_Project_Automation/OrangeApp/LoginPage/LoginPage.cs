@@ -23,6 +23,8 @@ namespace OrangeHRM_Project_Automation
             driver.FindElement(usernametxt).SendKeys(username);
             driver.FindElement(passwdtxt).SendKeys(password);
             driver.FindElement(loginbtn).Click();
+
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void AddEmployee_TC001()
         {
-            CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
 
             string url = "https://opensource-demo.orangehrmlive.com/";
             loginPage.Login(url, "Admin", "admin123");
@@ -30,7 +30,7 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void SearchEmployee_TC002()
         {
-            CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
 
             string url = "https://opensource-demo.orangehrmlive.com/";
             loginPage.Login(url, "Admin", "admin123");

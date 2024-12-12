@@ -12,25 +12,43 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void ApplyForLeave_TC001()
         {
-           // CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
+            string url = "https://opensource-demo.orangehrmlive.com/";
 
-           // string url = "https://opensource-demo.orangehrmlive.com/";
-           // loginPage.Login(url, "Admin", "admin123");
+            // Log in with valid credentials
+            loginPage.Login(url, "Admin", "admin123");
 
-           // leavePage.NavigateToLeavePage();
+            // Navigate to the Leave page
+            leavePage.NavigateToLeavePage();
 
-           // leavePage.ApplyForLeave("Annual Leave", "2024-12-10", "2024-12-15", "Vacation request");
+            // Ensure we're on the Leave page (you can assert an element on the Leave page)
+            bool isLeavePageVisible = CorePage.driver.FindElement(By.XPath("//h6[text()='Leave']")).Displayed;
+            Assert.IsTrue(isLeavePageVisible, "Failed to navigate to Leave page");
 
-           //bool isLeaveApplied = CorePage.driver.FindElement(By.XPath("//div[contains(text(),'Successfully Submitted')]")).Displayed;
-           //Assert.IsTrue(isLeaveApplied, "Leave application was not successful!");
+            //apply for leave
+            leavePage.ApplyForLeave("Annual Leave", "2024-12-10", "2024-12-15", "Vacation request");
 
-           // CorePage.driver.Quit();
+            bool isLeaveApplied = CorePage.driver.FindElement(By.XPath("//div[contains(text(),'Successfully Submitted')]")).Displayed;
+            Assert.IsTrue(isLeaveApplied, "Leave application was not successful!");
+            // CorePage.SeleniumInit("Chrome");
+
+            // string url = "https://opensource-demo.orangehrmlive.com/";
+            // loginPage.Login(url, "Admin", "admin123");
+
+            // leavePage.NavigateToLeavePage();
+
+            // leavePage.ApplyForLeave("Annual Leave", "2024-12-10", "2024-12-15", "Vacation request");
+
+            //bool isLeaveApplied = CorePage.driver.FindElement(By.XPath("//div[contains(text(),'Successfully Submitted')]")).Displayed;
+            //Assert.IsTrue(isLeaveApplied, "Leave application was not successful!");
+
+            // CorePage.driver.Quit();
         }
 
         [TestMethod]
         public void SearchLeaveRecords_TC002()
         {
-            //CorePage.SeleniumInit();
+            //CorePage.SeleniumInit("Chrome");
 
             //string url = "https://opensource-demo.orangehrmlive.com/";
             //loginPage.Login(url, "Admin", "admin123");

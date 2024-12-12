@@ -12,19 +12,19 @@ namespace OrangeHRM_Project_Automation
     [TestClass]
     public class LoginExec
     {
+        
         LoginPage loginPage = new LoginPage();
 
         [TestMethod]
         public void Login_Valid_TC001()
         {
-            CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
             string url = "https://opensource-demo.orangehrmlive.com/";
             string username = "Admin";
             string password = "admin123";
             loginPage.Login(url, username, password);
             string dashboardHeader = CorePage.driver.FindElement(By.XPath("//h6[text()='Dashboard']")).Text;
             Assert.AreEqual("Dashboard", dashboardHeader, "Login failed, Dashboard not found!");
-
             Task.Delay(1000);
             CorePage.driver.Close();
 
@@ -33,7 +33,7 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void Login_Invalid_TC002()
         {
-            CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
             string url = "https://opensource-demo.orangehrmlive.com/";
             string username = "Admins";
             string password = "admin!23";

@@ -16,7 +16,7 @@ namespace OrangeHRM_Project_Automation
         public void Logout()
         {
             driver.FindElement(dropdown).Click();
-            
+
             driver.FindElement(logoutbtn).Click();
         }
     }

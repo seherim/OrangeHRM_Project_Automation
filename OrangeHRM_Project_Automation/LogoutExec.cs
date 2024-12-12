@@ -17,10 +17,12 @@ namespace OrangeHRM_Project_Automation
         [TestMethod]
         public void Logout_Valid_TC001()
         {
-            CorePage.SeleniumInit();
+            CorePage.SeleniumInit("Chrome");
 
             string url = "https://opensource-demo.orangehrmlive.com/";
             loginPage.Login(url, "Admin", "admin123");
+
+            Task.Delay(2000);
 
             logoutPage.Logout();
 
