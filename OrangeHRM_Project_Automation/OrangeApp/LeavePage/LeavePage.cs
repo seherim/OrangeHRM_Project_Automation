@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Threading.Tasks;
+
 namespace OrangeHRM_Project_Automation
 {
     class LeavePage : CorePage
@@ -34,44 +36,38 @@ namespace OrangeHRM_Project_Automation
             IWebElement leaveTypeDropdown = wait.Until(driver =>driver.FindElement(By.XPath("//div[text()='-- Select --']")));
             leaveTypeDropdown.Click();
 
-            IWebElement leaveTypeOption = wait.Until(driver => driver.FindElement(By.XPath($"//span[text()='{leaveType}']")));
+            IWebElement leaveTypeOption = wait.Until(driver => driver.FindElement(By.XPath("//span[text()='CAN - FMLA']")));
             leaveTypeOption.Click();
 
             Console.WriteLine("Setting From Date...");
-            var fromDateInput = driver.FindElement(By.XPath("//label[text()='From Date']/following-sibling::div//input"));
-            fromDateInput.SendKeys(Keys.Control + "a");
-            fromDateInput.SendKeys(Keys.Delete);
-            fromDateInput.SendKeys(fromDate);
 
-            Console.WriteLine("Setting To Date...");
-            var toDateInput = driver.FindElement(By.XPath("//label[text()='To Date']/following-sibling::div//input"));
-            toDateInput.SendKeys(Keys.Control + "a");
-            toDateInput.SendKeys(Keys.Delete);
-            toDateInput.SendKeys(toDate);
+            // Wait for the From Date input field to be visible
+            IWebElement fromDateInput = wait.Until(driver => 
+                driver.FindElement(By.XPath("//label[contains(text(),'From Date')]/parent::div/following-sibling::div//input"))
+            );
+            fromDateInput.Click();
+            // Clear the field and set the date
+            Task.Delay(1000);
+            fromDateInput.Clear();
+            fromDateInput.SendKeys(fromDate); // Replace 'fromDate' with the actual date value
+            fromDateInput.SendKeys(Keys.Enter); // Optional: to confirm the input
+            
+            // Wait for the To Date input field to be visible
+            IWebElement toDateInput = wait.Until(driver =>
+                driver.FindElement(By.XPath("//label[contains(text(),'To Date')]/parent::div/following-sibling::div//input"))
+            );
+            toDateInput.Clear();
+            // Clear the field and set the date
+            toDateInput.Click();
+            toDateInput.Clear();
+            toDateInput.SendKeys(toDate); // Replace 'toDate' with the actual date value
+            toDateInput.SendKeys(Keys.Enter); // Optional: to confirm the input
 
             Console.WriteLine("Entering Comments...");
             driver.FindElement(By.XPath("//textarea[@placeholder='Type your comment here']")).SendKeys(comments);
 
             Console.WriteLine("Submitting Leave Application...");
             driver.FindElement(By.XPath("//button[contains(text(),'Submit')]")).Click();
-
-            //driver.FindElement(By.XPath("a[contains(text(),'Apply')]")).Click();
-            //driver.FindElement(By.XPath("//a[text()='Apply']")).Click();
-
-
-            //driver.FindElement(By.XPath("//label[text()='Leave Type']/following-sibling::div//input")).Click();
-            //driver.FindElement(By.XPath($"//span[text()='{leaveType}']")).Click();
-
-
-            //driver.FindElement(By.XPath("//label[text()='From Date']/following-sibling::div//input")).SendKeys(fromDate);
-
-
-            //driver.FindElement(By.XPath("//label[text()='To Date']/following-sibling::div//input")).SendKeys(toDate);
-
-
-            //driver.FindElement(By.XPath("//textarea[@placeholder='Type your comment here']")).SendKeys(comments);
-
-            //driver.FindElement(By.XPath("//button[text()='Submit']")).Click();
         }
 
 

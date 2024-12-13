@@ -26,23 +26,11 @@ namespace OrangeHRM_Project_Automation
             Assert.IsTrue(isLeavePageVisible, "Failed to navigate to Leave page");
 
             //apply for leave
-            leavePage.ApplyForLeave("Annual Leave", "2024-12-10", "2024-12-15", "Vacation request");
+            leavePage.ApplyForLeave("CAN - FMLA", "2024-12-10", "2024-12-15", "Vacation request");
 
             bool isLeaveApplied = CorePage.driver.FindElement(By.XPath("//div[contains(text(),'Successfully Submitted')]")).Displayed;
             Assert.IsTrue(isLeaveApplied, "Leave application was not successful!");
-            // CorePage.SeleniumInit("Chrome");
-
-            // string url = "https://opensource-demo.orangehrmlive.com/";
-            // loginPage.Login(url, "Admin", "admin123");
-
-            // leavePage.NavigateToLeavePage();
-
-            // leavePage.ApplyForLeave("Annual Leave", "2024-12-10", "2024-12-15", "Vacation request");
-
-            //bool isLeaveApplied = CorePage.driver.FindElement(By.XPath("//div[contains(text(),'Successfully Submitted')]")).Displayed;
-            //Assert.IsTrue(isLeaveApplied, "Leave application was not successful!");
-
-            // CorePage.driver.Quit();
+           
         }
 
         [TestMethod]

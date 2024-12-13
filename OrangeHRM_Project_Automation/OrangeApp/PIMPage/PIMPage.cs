@@ -17,7 +17,7 @@ namespace OrangeHRM_Project_Automation
         By savebtn = By.XPath("//button[text()=' Save ']");
         By searchbar = By.XPath("//input[@placeholder='Type for hints...']");
         By searchbtn = By.XPath("//button[text()=' Search ']");
-        #endregion
+        #endregion  
 
         public void NavigateToPIM()
         {
